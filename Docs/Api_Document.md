@@ -28,8 +28,8 @@
 | [/api/Student/User/ChangePassword](#apistudentuserchangepassword) | `PUT` | Security update |
 | [/api/Student/User/ChangeEmail](#apistudentuserchangeemail) | `PUT` | Email update |
 | [/api/Student/User/ConfirmNewEmail](#apistudentuserconfirmnewemail) | `GET` | Confirm change |
-| [/api/Student/UserProgress/add](#apistudentuserprogressadd) | `POST` | Record progress |
-| [/api/Student/UserProgress/me](#apistudentuserprogressme) | `GET` | View my stats |
+| [/api/Student/UserProgress/add](#apistudentuserprogressadd) | `POST` | Add or increment a Thikr, Hadith, or Category count |
+| [/api/Student/UserProgress/me](#apistudentuserprogressme) | `GET` | Get the current user's counts |
 | [/api/Student/ThikrCategory/GetAll](#apistudentthikrcategorygetall) | `GET` | All Thikr Categories |
 | [/api/Student/ThikrCategory/GetById/{id}](#apistudentthikrcategorygetbyidid) | `GET` | Thikr Category details |
 | [/api/Student/ThikrCategory/Search](#apistudentthikrcategorysearch) | `GET` | Search Thikr Category |
@@ -95,8 +95,8 @@
 | [/api/Admin/User/ChangePassword](#apiadminuserchangepassword) | `PUT` | Admin security |
 | [/api/Admin/User/ChangeEmail](#apiadminuserchangeemail) | `PUT` | Admin email |
 | [/api/Admin/User/ConfirmNewEmail](#apiadminuserconfirmnewemail) | `GET` | Admin confirm |
-| [/api/Admin/UserProgress/add](#apiadminuserprogressadd) | `POST` | Admin add stats |
-| [/api/Admin/UserProgress/me](#apiadminuserprogressme) | `GET` | Admin my stats |
+| [/api/Admin/UserProgress/add](#apiadminuserprogressadd) | `POST` | Add or increment a Thikr, Hadith, or Category count |
+| [/api/Admin/UserProgress/me](#apiadminuserprogressme) | `GET` | Get the current user's counts |
 | [/api/Admin/ThikrCategory/GetAudioUrls](#apiadminthikrcategorygetaudiourls) | `GET` | Media check |
 | [/api/Admin/ThikrCategory/GetAll](#apiadminthikrcategorygetall) | `GET` | Admin thikr list |
 | [/api/Admin/ThikrCategory/GetById/{id}](#apiadminthikrcategorygetbyidid) | `GET` | Admin thikr detail |
@@ -2757,7 +2757,7 @@
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | id | integer | Progress record identifier |
-| type | [ProgressType](#progresstype) | Type (Course, Lesson, etc.) |
+| type | [ProgressType](#progresstype) | Thikr, Hadith, or Category |
 | relatedItemId | integer | ID of the item being tracked |
-| count | integer | Current completion count or score |
+| count | integer | Stored total for that item |
 | LastUpdated | DateTime | Date of last update |
