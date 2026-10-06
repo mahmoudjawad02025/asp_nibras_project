@@ -1,6 +1,6 @@
 # 🎓 Nibras Learning Platform — ASP.NET Core API
 
-A **3-layer** Web API (DAL → BLL → PL) with a generic repository, JWT authentication, progress counts, and lesson file uploads.
+A scalable, **3-layer** Web API (DAL → BLL → PL) with a generic repository, JWT authentication, progress counts, and lesson file uploads.
 
 ![.NET](https://img.shields.io/badge/.NET-9.0-blue)
 
@@ -37,6 +37,7 @@ The **Nibras API** is a backend for courses, lessons, quizzes, Quran, Hadith, Th
 <br>
 
 ## 🧩 Key Features
+* 📈 **Scalable architecture:** The 3-layer separation (DAL / BLL / PL), dependency injection, and a generic repository keep modules independent. That made it easy to grow to 10 modules and 154 endpoints.
 * 🔐 **Identity:** JWT access tokens and refresh tokens. Logout stores the access token in an in-memory set. Roles are `Admin`, `Student`, and `SuperAdmin`. Email confirmation is required. Forgot-password, reset-password, change-email, and change-password endpoints exist.
 * 🗂️ **Data access:** A generic repository is used by several services, with Mapster mapping. It is not exposed as full CRUD for every entity.
 * 📚 **Courses and lessons:** Admin create, update, delete, and status toggle. Students can read them. Lesson create and update accept file uploads.
