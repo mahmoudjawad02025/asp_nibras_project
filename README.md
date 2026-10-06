@@ -37,7 +37,7 @@ The **Nibras API** is a backend for courses, lessons, quizzes, Quran, Hadith, Th
 <br>
 
 ## 🧩 Key Features
-* 📈 **Scalable architecture:** The 3-layer separation (DAL / BLL / PL), dependency injection, and a generic repository keep modules independent. That made it easy to grow to 10 modules and 154 endpoints.
+* 📈 **Scalable architecture:** The 3-layer separation (DAL / BLL / PL), dependency injection, and a generic repository organize the code across 10 modules and 154 endpoints.
 * 🔐 **Identity:** JWT access tokens and refresh tokens. Logout stores the access token in an in-memory set. Roles are `Admin`, `Student`, and `SuperAdmin`. Email confirmation is required. Forgot-password, reset-password, change-email, and change-password endpoints exist.
 * 🗂️ **Data access:** A generic repository is used by several services, with Mapster mapping. It is not exposed as full CRUD for every entity.
 * 📚 **Courses and lessons:** Admin create, update, delete, and status toggle. Students can read them. Lesson create and update accept file uploads.
